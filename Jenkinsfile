@@ -11,6 +11,7 @@ pipeline {
     }
   }
   stages {
+    cleanWs()
     stage('Checkout') {
       steps {
         sh 'echo passed'

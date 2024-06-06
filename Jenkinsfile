@@ -1,4 +1,11 @@
 pipeline {
+  
+  pipeline {
+  options {
+    buildDiscarder(logRotator(daysToKeepStr: '30', artifactDaysToKeepStr: '30'))
+    
+  }
+
   agent {
     docker {
       image 'abhishekf5/maven-abhishek-docker-agent:v1'

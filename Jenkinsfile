@@ -11,8 +11,9 @@ pipeline {
     }
   }
   stages {
-    cleanWs()
+    
     stage('Checkout') {
+      cleanWs()
       steps {
         sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'

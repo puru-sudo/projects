@@ -1,7 +1,9 @@
 pipeline {
   
   options {
-    buildDiscarder(logRotator(daysToKeepStr: '30', artifactDaysToKeepStr: '30'))  
+    buildDiscarder(logRotator(daysToKeepStr: '30', artifactDaysToKeepStr: '30')) 
+    disableConcurrentBuilds()
+    skipDefaultCheckout() 
   }
 
   agent {
